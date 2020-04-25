@@ -1,23 +1,14 @@
 const path = require('path');
 const mongoose = require('mongoose');
 
-require('models/user');
-
 const { Schema } = mongoose;
 
 const generalSchema = new Schema({ // Схема
-  title: {
+  name: {
     type: Schema.Types.String,
     default: '',
     minLength: 0,
     maxLength: 255,
-  },
-  content: {
-    type: Schema.Types.String,
-  },
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: 'user',
   },
 }, { timestamps: true }); // Настройки схемы, в данном случае добавить поле createdAt, updatedAt (когда создали документ, когда обновили документ)
 

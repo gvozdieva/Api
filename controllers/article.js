@@ -15,10 +15,14 @@ const create = async (title, content) => {
   
   return doc.id;
 };
-/* 
-const findById = async (id) => {
 
+const findById = async (id) => {
+  const doc = await ArticleModel.findById(id).populate('author');
+  console.log(doc);
+
+  // const doc = await ArticleModel.Model.findOne({ name: 'xfg' });
 };
- */
+// findById("5e89bbb09ec85063431f3295");
+
 module.exports.getList = getList;
 module.exports.create = create;

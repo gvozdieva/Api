@@ -3,6 +3,7 @@ const createError = require('http-errors');
 const helmet = require('helmet');
 const logger = require('morgan');
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const sassMiddleware = require('node-sass-middleware');
 
 // Роуты
@@ -20,6 +21,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 
 app.use(sassMiddleware({
   src: path.join(__dirname, 'pablic'),
