@@ -2,7 +2,7 @@
 // Он запускает http сервер
 const http = require('http');
 
-const port = require('config').get('server:port');
+const port = require('config').get('server:httpPort');
 // так как, теоретически стандартные проверки express универсальны для любого http сервера, мы вынесли саму строчку относящуюся к express отдельно. Теоретически вы можете заменить ее на любой другой http сервер
 const expressCallback = require('./expressCallback');
 
