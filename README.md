@@ -1,4 +1,2 @@
 # Api
--Создание статьи
--cookies
--sockets
+Создание статьи, cookies, ajw, sockets
